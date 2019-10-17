@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    types: [edited, opened, reopened, synchronize]
+    types: [edited]
 
 jobs:
   hello_world_job:
