@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [pull_request, push]
 
 jobs:
   hello_world_job:
@@ -10,12 +10,4 @@ jobs:
       - name: PR Lint GitHub Action
         uses: seferov/pr-lint-action@v1.0.4
         with:
-          title-regex: '^\[PROJECT-\d*\]\ '
-      - name: hello world action step
-        id: hello
-        uses: christopherscott/hello-world-javascript-action@v1.0.1
-        with:
-          who-to-greet: 'chris the dude'
-      - name: get the output time
-        run: echo "the time was ${{ steps.hello.outputs.time }}"
-
+          title-regex: 'foo'
