@@ -1,0 +1,13 @@
+name: PRs
+
+on: pull_request
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: a job to say hello
+    steps:
+      - name: PR Lint GitHub Action
+        uses: seferov/pr-lint-action@v1.0.4
+        with:
+          title-regex: '^\[PROJECT-\d*\]\ '
